@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Missão Fala em Casa — Dr. Geovani Miranda</title>
+<meta name="description" content="30 brincadeiras do dia a dia para estimular a comunicação e a linguagem de crianças de 2 a 6 anos. Cada missão tem três caminhos, do primeiro gesto à criança que já conta histórias.">
+<meta property="og:title" content="Missão Fala em Casa">
+<meta property="og:description" content="30 brincadeiras do dia a dia para conversar mais com a criança. Com o bônus Rotinas sem Guerra.">
+<meta property="og:image" content="https://geoprm.github.io/missao-fala-em-casa/img/produto-capa.jpg">
+<meta property="og:type" content="product">
+<meta name="theme-color" content="#FDF6E7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --papel: #FDF6E7; --papel-2: #F6EBD3; --tinta: #2B2118; --tinta-suave: #5E5245;
+    --ceu: #3A6EA8; --folha: #3F7D54; --framboesa: #C4452F; --sol: #E0A02A; --ameixa: #7A3B5E;
+    --branco: #FFFFFF; --linha: #E4D6BC;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--papel); color: var(--tinta); font-family: "Manrope", "Segoe UI", system-ui, sans-serif; font-size: 17px; line-height: 1.55; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .faixa { padding: 72px 20px; }
+  .miolo { max-width: 1080px; margin: 0 auto; }
+  .estreito { max-width: 720px; margin: 0 auto; }
+  h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -.02em; text-wrap: balance; }
+  h1 { font-size: clamp(34px, 5.4vw, 58px); font-weight: 800; }
+  h2 { font-size: clamp(28px, 3.8vw, 40px); font-weight: 800; }
+  h3 { font-size: 21px; font-weight: 800; }
+  p { margin: 0; }
+  .eyebrow { font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--ameixa); }
+  .filete { display: block; width: 44px; height: 3px; background: var(--framboesa); border-radius: 2px; margin: 18px 0 0; }
+
+  /* botão: o único elemento que grita */
+  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--framboesa); color: #fff; text-decoration: none; font-weight: 800; font-size: 19px; padding: 18px 30px; border-radius: 999px; border: 3px solid var(--tinta); box-shadow: 0 5px 0 var(--tinta); transition: transform .12s ease, box-shadow .12s ease; }
+  .botao:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--tinta); }
+  .botao:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--tinta); }
+  .botao:focus-visible { outline: 3px solid var(--ceu); outline-offset: 4px; }
+  .seta { font-size: 22px; line-height: 1; }
+
+  /* topo */
+  .topo { padding: 18px 20px; border-bottom: 1px solid var(--linha); }
+  .topo .miolo { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .marca { font-weight: 800; font-size: 15px; }
+  .marca span { color: var(--tinta-suave); font-weight: 600; }
+
+  /* herói */
+  .heroi { padding: 56px 20px 64px; }
+  .heroi .miolo { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+  .heroi .lead { font-size: 20px; color: var(--tinta-suave); margin-top: 20px; max-width: 34ch; }
+  .selos { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .selo { font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border: 2px solid var(--tinta); border-radius: 999px; padding: 5px 13px; background: var(--branco); }
+  .preco { margin-top: 30px; display: grid; gap: 14px; justify-items: start; }
+  .preco-linha { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .preco-valor { font-size: 44px; font-weight: 800; letter-spacing: -.02em; }
+  .preco-nota { font-size: 15px; color: var(--tinta-suave); }
+  .preco-nota b { color: var(--tinta); }
+  .garantias { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: var(--tinta-suave); }
+  .garantias span::before { content: "✓"; color: var(--folha); font-weight: 800; margin-right: 6px; }
+  .heroi-img { position: relative; }
+  .heroi-img img { border-radius: 18px; border: 3px solid var(--tinta); box-shadow: 10px 10px 0 var(--sol); }
+
+  /* faixa de vinhetas: o mundo do produto */
+  .vinhetas { background: var(--tinta); padding: 22px 0; overflow: hidden; }
+  .vinhetas-trilho { display: flex; gap: 22px; width: max-content; animation: desliza 50s linear infinite; }
+  .vinhetas img { width: 74px; height: 74px; border-radius: 999px; border: 3px solid var(--papel); background: var(--papel); object-fit: cover; }
+  @keyframes desliza { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .vinhetas-trilho { animation: none; } html { scroll-behavior: auto; } }
+
+  /* problema */
+  .problema { background: var(--papel-2); }
+  .problema .estreito > p { font-size: 19px; margin-top: 18px; color: var(--tinta-suave); }
+  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+  .cartao { background: var(--branco); border: 2px solid var(--tinta); border-radius: 14px; padding: 22px; }
+  .cartao p { margin-top: 8px; color: var(--tinta-suave); font-size: 16px; }
+
+  /* caminhos */
+  .duas-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .caminhos-lista { display: grid; gap: 14px; margin-top: 28px; }
+  .caminho { display: grid; grid-template-columns: 58px 1fr; gap: 14px; align-items: start; background: var(--branco); border: 2px solid var(--tinta); border-radius: 14px; padding: 16px 18px; }
+  .caminho svg { width: 58px; height: 20px; margin-top: 4px; }
+  .caminho svg circle { fill: var(--ameixa); stroke: var(--tinta); stroke-width: 1.4; }
+  .caminho svg line { stroke: var(--tinta); stroke-width: 1.4; }
+  .caminho .rotulo { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--ameixa); }
+  .caminho p { font-size: 16px; color: var(--tinta-suave); margin-top: 2px; }
+  .exemplo { margin-top: 20px; font-size: 15px; color: var(--tinta-suave); border-left: 4px solid var(--folha); padding: 4px 0 4px 14px; }
+  .pagina-img { border-radius: 12px; border: 3px solid var(--tinta); box-shadow: -10px 10px 0 var(--ceu); transform: rotate(1.5deg); }
+
+  /* passos */
+  .passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; counter-reset: passo; }
+  .passo { position: relative; background: var(--branco); border: 2px solid var(--tinta); border-radius: 14px; padding: 26px 22px 22px; }
+  .passo::before { counter-increment: passo; content: counter(passo); position: absolute; top: -20px; left: 20px; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 999px; background: var(--sol); border: 2px solid var(--tinta); font-weight: 800; font-size: 18px; }
+  .passo p { margin-top: 8px; color: var(--tinta-suave); font-size: 16px; }
+
+  /* recebe */
+  .recebe { background: var(--branco); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
+  .lista-recebe { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+  .lista-recebe li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; font-size: 17px; }
+  .lista-recebe li::before { content: ""; width: 22px; height: 22px; margin-top: 3px; border-radius: 999px; background: var(--folha); border: 2px solid var(--tinta); box-shadow: inset 0 0 0 4px #fff; }
+  .galeria { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .galeria img { border-radius: 10px; border: 2px solid var(--tinta); }
+  .galeria img:first-child { grid-column: 1 / -1; }
+
+  /* bônus */
+  .bonus { background: var(--ameixa); color: #fff; }
+  .bonus .eyebrow { color: #F6D8E4; }
+  .bonus .duas-col img { border-radius: 12px; border: 3px solid var(--tinta); box-shadow: 10px 10px 0 var(--sol); }
+  .momentos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
+  .momento { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,.1); border: 1.5px solid rgba(255,255,255,.35); border-radius: 12px; padding: 8px 12px; font-weight: 700; font-size: 15px; }
+  .momento img { width: 40px; height: 40px; border-radius: 999px; background: var(--papel); }
+  .bonus p.texto { margin-top: 16px; color: #F3E3EA; font-size: 18px; }
+
+  /* autor e transparência */
+  .autor { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .bloco { background: var(--branco); border: 2px solid var(--tinta); border-radius: 14px; padding: 26px; }
+  .bloco p { margin-top: 12px; color: var(--tinta-suave); font-size: 16px; }
+  .bloco ul { margin: 12px 0 0; padding-left: 20px; color: var(--tinta-suave); font-size: 16px; }
+  .bloco li { margin-bottom: 6px; }
+  .bloco.alerta { border-color: var(--framboesa); }
+
+  /* faq */
+  details { background: var(--branco); border: 2px solid var(--tinta); border-radius: 12px; padding: 0 20px; margin-top: 12px; }
+  summary { cursor: pointer; font-weight: 800; padding: 18px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 24px; line-height: 1; color: var(--ameixa); }
+  details[open] summary::after { content: "–"; }
+  details p { padding: 0 0 18px; color: var(--tinta-suave); font-size: 16px; }
+  summary:focus-visible { outline: 3px solid var(--ceu); outline-offset: 2px; border-radius: 6px; }
+
+  /* oferta final */
+  .oferta { text-align: center; }
+  .oferta .caixa { background: var(--branco); border: 3px solid var(--tinta); border-radius: 22px; padding: 40px 24px; box-shadow: 10px 10px 0 var(--folha); max-width: 640px; margin: 0 auto; display: grid; gap: 16px; justify-items: center; }
+  .oferta .caixa img { width: 260px; }
+  .oferta .preco-linha { justify-content: center; }
+
+  /* rodapé */
+  footer { padding: 40px 20px 110px; font-size: 14px; color: var(--tinta-suave); border-top: 1px solid var(--linha); }
+  footer .miolo { display: grid; gap: 10px; }
+  footer a { font-weight: 700; }
+
+  /* barra fixa no celular */
+  .barra { position: fixed; left: 0; right: 0; bottom: 0; background: var(--papel); border-top: 2px solid var(--tinta); padding: 10px 16px; display: none; align-items: center; justify-content: space-between; gap: 12px; z-index: 10; }
+  .barra .botao { font-size: 16px; padding: 12px 18px; box-shadow: 0 3px 0 var(--tinta); }
+  .barra b { font-size: 20px; }
+
+  .heroi .miolo > *, .duas-col > *, .autor > *, .tres > *, .passos > *, .galeria > * { min-width: 0; }
+
+  @media (max-width: 860px) {
+    .faixa { padding: 56px 16px; }
+    .heroi { padding: 36px 16px 48px; }
+    .heroi .miolo, .duas-col, .autor { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    .tres, .passos { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+    .topo .botao { display: none; }
+    .botao { font-size: 17px; padding: 16px 22px; }
+    .momentos { grid-template-columns: 1fr; }
+    .barra { display: flex; }
+    .pagina-img { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="miolo">
+    <p class="marca">Missão Fala em Casa <span>· Dr. Geovani Miranda</span></p>
+    <a class="botao" href="https://pay.hotmart.com/U108211999R" style="font-size:15px;padding:10px 18px;box-shadow:0 3px 0 var(--tinta)">Quero a missão</a>
+  </div>
+</header>
+
+<main>
+<section class="heroi">
+  <div class="miolo">
+    <div>
+      <p class="eyebrow">Para famílias de crianças de 2 a 6 anos</p>
+      <h1>Mais conversa com a sua criança, nos momentos comuns do dia.</h1>
+      <p class="lead">30 brincadeiras de cerca de 10 minutos, no banho, na refeição e na hora de brincar — cada uma com três caminhos, do primeiro gesto à criança que já conta histórias.</p>
+      <div class="selos"><span class="selo">PDF ilustrado</span><span class="selo">sem pressão</span><span class="selo">sem telas recreativas</span></div>
+      <div class="preco">
+        <div class="preco-linha"><span class="preco-valor">R$ 37</span><span class="preco-nota"><b>preço de lançamento</b> · o preço normal será R$ 67</span></div>
+        <a class="botao" href="https://pay.hotmart.com/U108211999R">Quero a Missão Fala em Casa <span class="seta">→</span></a>
+        <div class="garantias"><span>Acesso imediato</span><span>PIX, boleto ou cartão</span><span>7 dias de garantia</span></div>
+      </div>
+    </div>
+    <div class="heroi-img"><img src="img/produto-capa.jpg" alt="Capas da Missão Fala em Casa e do bônus Rotinas sem Guerra" width="1000" height="1000"></div>
+  </div>
+</section>
+
+<div class="vinhetas" aria-hidden="true">
+  <div class="vinhetas-trilho">
+    <img src="img/ic-revezar.png" alt=""><img src="img/ic-escondido.png" alt=""><img src="img/ic-patinho.png" alt=""><img src="img/ic-livro.png" alt=""><img src="img/ic-gato.png" alt=""><img src="img/ic-palmas.png" alt=""><img src="img/ic-bolhas.png" alt=""><img src="img/ic-quadrinhos.png" alt=""><img src="img/ic-despertador.png" alt=""><img src="img/ic-escova.png" alt=""><img src="img/ic-banheira.png" alt=""><img src="img/ic-travesseiro.png" alt="">
+    <img src="img/ic-revezar.png" alt=""><img src="img/ic-escondido.png" alt=""><img src="img/ic-patinho.png" alt=""><img src="img/ic-livro.png" alt=""><img src="img/ic-gato.png" alt=""><img src="img/ic-palmas.png" alt=""><img src="img/ic-bolhas.png" alt=""><img src="img/ic-quadrinhos.png" alt=""><img src="img/ic-despertador.png" alt=""><img src="img/ic-escova.png" alt=""><img src="img/ic-banheira.png" alt=""><img src="img/ic-travesseiro.png" alt="">
+  </div>
+</div>
+
+<section class="faixa problema">
+  <div class="estreito">
+    <p class="eyebrow">Por que uma missão</p>
+    <h2>Você não precisa transformar a sua casa num consultório.</h2>
+    <p>A linguagem cresce na conversa de todo dia. O que muda tudo é o jeito de conversar: esperar um pouco mais, comentar em vez de perguntar, devolver o que a criança disse com uma palavra a mais. A Missão Fala em Casa organiza isso em 30 brincadeiras simples, uma por dia.</p>
+  </div>
+  <div class="miolo tres">
+    <div class="cartao"><h3>Sem cobrança</h3><p>Nada de obrigar a repetir, a olhar nos olhos ou a acertar. Olhar, gesto, som, palavra e figuras: toda forma de comunicar vale.</p></div>
+    <div class="cartao"><h3>Dentro da rotina</h3><p>Banho, refeição, guardar os brinquedos, a hora da história. Nada de material caro: o que você já tem em casa basta.</p></div>
+    <div class="cartao"><h3>Do jeito da sua criança</h3><p>Cada missão tem três caminhos. Você escolhe pelo jeito que ela comunica hoje — não pela idade.</p></div>
+  </div>
+</section>
+
+<section class="faixa">
+  <div class="miolo duas-col">
+    <div>
+      <p class="eyebrow">O que torna a missão diferente</p>
+      <h2>A mesma brincadeira, três caminhos.</h2>
+      <div class="caminhos-lista">
+        <div class="caminho"><svg viewBox="0 0 30 10" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/></svg><div><p class="rotulo">Caminho 1</p><h3>Começando a comunicar</h3><p>Comunica com olhar, gestos, sons e as primeiras palavras — ou com figuras e pranchas.</p></div></div>
+        <div class="caminho"><svg viewBox="0 0 30 10" aria-hidden="true"><line x1="5" y1="5" x2="15" y2="5"/><circle cx="5" cy="5" r="3.6"/><circle cx="15" cy="5" r="3.6"/></svg><div><p class="rotulo">Caminho 2</p><h3>Combinando palavras</h3><p>Usa palavras soltas e começa a juntar duas ou três.</p></div></div>
+        <div class="caminho"><svg viewBox="0 0 30 10" aria-hidden="true"><line x1="5" y1="5" x2="25" y2="5"/><circle cx="5" cy="5" r="3.6"/><circle cx="15" cy="5" r="3.6"/><circle cx="25" cy="5" r="3.6"/></svg><div><p class="rotulo">Caminho 3</p><h3>Conversando e contando</h3><p>Já fala frases: pergunta, explica, inventa e conta o que aconteceu.</p></div></div>
+      </div>
+      <p class="exemplo">No "Cadê? Achou!", a criança do caminho 1 procura e mostra; a do caminho 2 diz onde estava; a do caminho 3 esconde e dá pistas para você achar.</p>
+    </div>
+    <img class="pagina-img" src="img/missao-cartao.jpg" alt="Página de missões do guia, com ilustrações e os três caminhos" width="900" height="1273" loading="lazy">
+  </div>
+</section>
+
+<section class="faixa problema">
+  <div class="miolo">
+    <p class="eyebrow">Como funciona</p>
+    <h2>Dez minutos por dia, quando for bom para vocês.</h2>
+    <div class="passos">
+      <div class="passo"><h3>Escolha o caminho</h3><p>A página "Por onde começo?" ajuda a identificar o caminho da sua criança em poucos minutos.</p></div>
+      <div class="passo"><h3>Uma missão por dia</h3><p>Cada missão diz o material, como brincar, o que dizer, o que observar e o que fazer se não fluir.</p></div>
+      <div class="passo"><h3>Pinte a trilha</h3><p>A cada missão, um círculo pintado. A cada semana, uma medalha de participação. No fim, festa e certificado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faixa recebe">
+  <div class="miolo duas-col">
+    <div>
+      <p class="eyebrow">O que você recebe</p>
+      <h2>Um guia ilustrado de 26 páginas.</h2>
+      <ul class="lista-recebe">
+        <li>30 missões ilustradas, cada uma com três caminhos</li>
+        <li>"Por onde começo?" e "E se não funcionar?"</li>
+        <li>Retrato inicial e final da comunicação — sem nota e sem comparar com outras crianças</li>
+        <li>Trilha dos 30 dias para pintar, medalhas de participação e certificado</li>
+        <li>Fundamentos e referências, para quem quer entender o porquê</li>
+        <li>PDF para imprimir ou ler no celular</li>
+      </ul>
+    </div>
+    <div class="galeria">
+      <img src="img/missao-trilha.jpg" alt="Trilha dos 30 dias com medalhas nas curvas" width="900" height="1273" loading="lazy">
+      <img src="img/missao-caminhos.jpg" alt="Página Por onde começo, com os três caminhos" width="900" height="1273" loading="lazy">
+      <img src="img/missao-capa.jpg" alt="Capa do guia Missão Fala em Casa" width="700" height="990" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="faixa bonus">
+  <div class="miolo duas-col">
+    <img src="img/bonus-momento.jpg" alt="Página do bônus Rotinas sem Guerra" width="900" height="1273" loading="lazy">
+    <div>
+      <p class="eyebrow">Bônus incluído</p>
+      <h2>Rotinas sem Guerra</h2>
+      <p class="texto">Comunicação para os momentos difíceis do dia. Sete ferramentas simples — antecipar, mostrar a rotina, "primeiro, depois", escolhas dentro do combinado — aplicadas a seis momentos:</p>
+      <div class="momentos">
+        <div class="momento"><img src="img/ic-despertador.png" alt="">Acordar para a escola</div>
+        <div class="momento"><img src="img/ic-escova.png" alt="">Escovar os dentes</div>
+        <div class="momento"><img src="img/ic-banheira.png" alt="">Hora do banho</div>
+        <div class="momento"><img src="img/ic-caderno.png" alt="">Tarefa da escola</div>
+        <div class="momento"><img src="img/ic-escorregador.png" alt="">Sair do parque ou da tela</div>
+        <div class="momento"><img src="img/ic-travesseiro.png" alt="">Hora de dormir</div>
+      </div>
+      <p class="texto">PDF de 11 páginas, para crianças de 2 a 10 anos, com quadros de rotina para imprimir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faixa">
+  <div class="miolo autor">
+    <div class="bloco">
+      <p class="eyebrow">Quem preparou</p>
+      <h3 style="margin-top:10px">Dr. Geovani Miranda</h3>
+      <p>Fonoaudiólogo · CRFa 4-12208. Atuação em linguagem, motricidade orofacial e neurodesenvolvimento infantil.</p>
+      <p>As missões reúnem estratégias de estimulação de linguagem mediada pelos pais — seguir o interesse da criança, esperar, comentar, ampliar o que ela diz — e práticas recomendadas para a primeira infância, como a leitura compartilhada e as brincadeiras com rimas e sílabas.</p>
+    </div>
+    <div class="bloco alerta">
+      <p class="eyebrow" style="color:var(--framboesa)">Com toda a transparência</p>
+      <h3 style="margin-top:10px">O que a missão é — e o que não é</h3>
+      <ul>
+        <li>É um guia educativo para brincar e conversar em casa.</li>
+        <li>Não diagnostica, não é terapia e não substitui avaliação fonoaudiológica.</li>
+        <li>Não promete que a criança vai falar em 30 dias.</li>
+        <li>O guia em si não foi testado em estudo científico.</li>
+        <li>Se você está preocupado com a fala, a compreensão ou a audição, procure avaliação — inclusive enquanto usa a missão.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="faixa problema">
+  <div class="estreito">
+    <p class="eyebrow">Perguntas frequentes</p>
+    <h2>Antes de comprar</h2>
+    <details><summary>Minha criança ainda não fala. Serve?</summary><p>Ela pode brincar desde já pelo Caminho 1 — olhar, gesto, som e figuras também são comunicação. E procure uma avaliação fonoaudiológica e auditiva agora, sem esperar o fim da missão.</p></details>
+    <details><summary>Minha criança já fala muito bem. Vale a pena?</summary><p>Vale: o Caminho 3 traz desafios de explicar, planejar, inventar histórias e brincar com rimas e sílabas. Conversar bem também se aprende brincando.</p></details>
+    <details><summary>Preciso imprimir?</summary><p>Não é obrigatório: dá para ler no celular. A trilha, as medalhas e o certificado ficam melhores impressos.</p></details>
+    <details><summary>Quanto tempo por dia?</summary><p>Cerca de 10 minutos é uma sugestão, não uma regra. Pulou dias? Siga de onde parou.</p></details>
+    <details><summary>Como recebo?</summary><p>Logo depois da confirmação do pagamento você recebe o acesso por e-mail, pela Hotmart, para baixar os dois PDFs.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia: se não for para você, pede o reembolso pela própria Hotmart.</p></details>
+    <details><summary>Sou fonoaudiólogo ou trabalho numa escola. Posso usar?</summary><p>Esta é a licença familiar, para uso da família compradora. Para entregar às famílias que você atende ou às da escola, fale comigo pelo WhatsApp sobre as licenças profissional e escolar.</p></details>
+  </div>
+</section>
+
+<section class="faixa oferta">
+  <div class="caixa">
+    <img src="img/produto-capa.jpg" alt="" width="1000" height="1000" loading="lazy">
+    <h2>Missão Fala em Casa + Rotinas sem Guerra</h2>
+    <div class="preco-linha"><span class="preco-valor">R$ 37</span><span class="preco-nota"><b>preço de lançamento</b> · o preço normal será R$ 67</span></div>
+    <a class="botao" href="https://pay.hotmart.com/U108211999R">Quero começar a missão <span class="seta">→</span></a>
+    <div class="garantias" style="justify-content:center"><span>Acesso imediato</span><span>PIX, boleto ou cartão</span><span>7 dias de garantia</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="miolo">
+    <p><b>Dr. Geovani Miranda · Fonoaudiólogo · CRFa 4-12208</b></p>
+    <p>Material educativo. Não substitui avaliação fonoaudiológica. Licença de uso familiar: não compartilhe nem revenda o arquivo.</p>
+    <p>Dúvidas sobre a compra: <a href="https://wa.me/5574988617935">WhatsApp (74) 98861-7935</a> · <a href="https://instagram.com/drgeovanimiranda">@drgeovanimiranda</a></p>
+    <p>Pagamento, entrega e reembolso processados pela Hotmart.</p>
+  </div>
+</footer>
+
+<div class="barra" role="complementary" aria-label="Comprar">
+  <div><b>R$ 37</b><br><span style="font-size:13px;color:var(--tinta-suave)">preço de lançamento</span></div>
+  <a class="botao" href="https://pay.hotmart.com/U108211999R">Quero a missão</a>
+</div>
+
+</body>
+</html>
