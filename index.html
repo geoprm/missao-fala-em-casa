@@ -148,6 +148,8 @@
   .barra b { font-size: 20px; }
 
   .heroi .miolo > *, .duas-col > *, .autor > *, .tres > *, .passos > *, .galeria > * { min-width: 0; }
+  .video-moldura { max-width: 360px; margin: 0 auto; border: 4px solid var(--tinta); border-radius: 28px; overflow: hidden; box-shadow: 12px 12px 0 var(--framboesa); background: var(--tinta); }
+  .video-moldura video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; }
 
   @media (max-width: 860px) {
     .faixa { padding: 56px 16px; }
@@ -195,6 +197,23 @@
     <img src="img/ic-revezar.png" alt=""><img src="img/ic-escondido.png" alt=""><img src="img/ic-patinho.png" alt=""><img src="img/ic-livro.png" alt=""><img src="img/ic-gato.png" alt=""><img src="img/ic-palmas.png" alt=""><img src="img/ic-bolhas.png" alt=""><img src="img/ic-quadrinhos.png" alt=""><img src="img/ic-despertador.png" alt=""><img src="img/ic-escova.png" alt=""><img src="img/ic-banheira.png" alt=""><img src="img/ic-travesseiro.png" alt="">
   </div>
 </div>
+
+<section class="faixa">
+  <div class="miolo duas-col video-col">
+    <div class="video-moldura"><video src="video/missao.mp4" poster="video/poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Vídeo de 36 segundos sobre a Missão Fala em Casa"></video></div>
+    <div>
+      <p class="eyebrow">Em 36 segundos</p>
+      <h2>Veja como a missão funciona.</h2>
+      <ul class="lista-recebe">
+        <li>Uma brincadeira por dia, dentro da rotina</li>
+        <li>A trilha dos 30 dias para pintar</li>
+        <li>Três caminhos em cada missão</li>
+        <li>O bônus Rotinas sem Guerra</li>
+      </ul>
+      <p style="margin-top:26px"><a class="botao" href="https://pay.hotmart.com/U108211999R">Quero a Missão Fala em Casa <span class="seta">→</span></a></p>
+    </div>
+  </div>
+</section>
 
 <section class="faixa problema">
   <div class="estreito">
